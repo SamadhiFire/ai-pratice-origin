@@ -1,0 +1,72 @@
+page {
+  font-family: -apple-system, "SF Pro Text", "PingFang SC", "MiSans", sans-serif;
+  background-color: #F8F8F8;
+  --oa-card-bg: #FFFFFF;
+  --oa-card-border-color: #E8EAED;
+  --oa-card-radius: 16rpx;
+  --oa-modal-duration: 0.22s;
+  --oa-fast-transition-duration: 0.2s;
+}
+
+page,
+view,
+scroll-view,
+text,
+button,
+input,
+textarea,
+image,
+picker,
+open-data {
+  font-family: inherit;
+}
+
+/* #ifdef MP-WEIXIN */
+scroll-view::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  background: transparent;
+  display: none;
+}
+/* #endif */
+
+.oa-card-surface {
+  border: 1rpx solid var(--oa-card-border-color);
+  border-radius: var(--oa-card-radius);
+  background: var(--oa-card-bg);
+}
+
+button,
+input,
+textarea {
+  transition: all var(--oa-fast-transition-duration) ease;
+}
+
+.oa-modal-mask {
+  animation: oa-modal-mask-fade-in var(--oa-modal-duration) ease both;
+}
+
+.oa-modal-panel {
+  animation: oa-modal-enter var(--oa-modal-duration) ease both;
+}
+
+@keyframes oa-modal-mask-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes oa-modal-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

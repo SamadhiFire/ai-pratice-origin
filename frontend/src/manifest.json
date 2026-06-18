@@ -1,0 +1,14 @@
+{
+  "name": "学习软件",
+  "appid": "__UNI__STUDY_QUIZ_TOOL",
+  "description": "材料出题小程序",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wxb6248b503a622542",
+    "setting": {
+      "urlCheck": false
+    }
+  }
+}

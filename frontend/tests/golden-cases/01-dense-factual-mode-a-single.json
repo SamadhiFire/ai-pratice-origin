@@ -1,0 +1,93 @@
+{
+  "id": "dense-factual-mode-a-single",
+  "description": "Dense factual material with three already-usable single choice questions",
+  "request": {
+    "material": "eCPM 用于衡量每千次广告展示能够产生的收益，公式为总收益除以总展示次数再乘以 1000。材料同时指出，eCPM 会受到出价、预估点击率、转化率与填充率影响。CTR 表示点击次数除以展示次数，用于衡量素材与人群的匹配程度。",
+    "mode": "modeA",
+    "type": "single",
+    "difficulty": "medium",
+    "count": 3,
+    "userTags": ["广告指标", "投放优化"]
+  },
+  "candidate": {
+    "keypoints": [
+      {
+        "id": "kp_0",
+        "title": "eCPM 定义",
+        "importance_score": 9,
+        "evidence_quote": "eCPM 用于衡量每千次广告展示能够产生的收益"
+      },
+      {
+        "id": "kp_1",
+        "title": "eCPM 影响因素",
+        "importance_score": 8,
+        "evidence_quote": "eCPM 会受到出价、预估点击率、转化率与填充率影响"
+      },
+      {
+        "id": "kp_2",
+        "title": "CTR 定义",
+        "importance_score": 7,
+        "evidence_quote": "CTR 表示点击次数除以展示次数"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q_0",
+        "type": "single",
+        "stem": "根据材料，eCPM 最主要用于衡量什么？",
+        "tag": "广告指标",
+        "options": [
+          { "key": "A", "text": "每千次广告展示能够产生的收益" },
+          { "key": "B", "text": "单次点击的固定成本" },
+          { "key": "C", "text": "广告素材的制作周期" },
+          { "key": "D", "text": "预算审批的通过率" }
+        ],
+        "answer": "A",
+        "explanation": "材料直接给出了 eCPM 的用途。",
+        "evidence_quote": "eCPM 用于衡量每千次广告展示能够产生的收益",
+        "keypoint_id": "kp_0",
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_1",
+        "type": "single",
+        "stem": "材料中明确列为 eCPM 影响因素的是哪一项？",
+        "tag": "投放优化",
+        "options": [
+          { "key": "A", "text": "填充率" },
+          { "key": "B", "text": "办公面积" },
+          { "key": "C", "text": "法务人数" },
+          { "key": "D", "text": "海报尺寸" }
+        ],
+        "answer": "A",
+        "explanation": "材料列举了填充率等因素。",
+        "evidence_quote": "eCPM 会受到出价、预估点击率、转化率与填充率影响",
+        "keypoint_id": "kp_1",
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_2",
+        "type": "single",
+        "stem": "根据材料，CTR 的计算方式是什么？",
+        "tag": "广告指标",
+        "options": [
+          { "key": "A", "text": "点击次数 / 展示次数" },
+          { "key": "B", "text": "展示次数 / 点击次数" },
+          { "key": "C", "text": "总收益 / 点击次数" },
+          { "key": "D", "text": "点击次数 / 转化次数" }
+        ],
+        "answer": "A",
+        "explanation": "材料直接给出了 CTR 的定义。",
+        "evidence_quote": "CTR 表示点击次数除以展示次数",
+        "keypoint_id": "kp_2",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "expected": {
+    "minUsableCount": 3,
+    "finalCount": 3,
+    "requireUniqueStems": true,
+    "requireEvidence": true
+  }
+}

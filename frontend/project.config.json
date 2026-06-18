@@ -1,0 +1,14 @@
+{
+  "appid": "wxb6248b503a622542",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "dist/build/mp-weixin",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "minifyWXML": true,
+    "ignoreUploadUnusedFiles": true
+  },
+  "simulatorPluginLibVersion": {}
+}

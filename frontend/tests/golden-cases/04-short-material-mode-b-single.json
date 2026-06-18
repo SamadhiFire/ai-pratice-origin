@@ -1,0 +1,47 @@
+{
+  "id": "short-material-mode-b-single",
+  "description": "Short material near validation limit where one normalized question is supplemented by fallback",
+  "request": {
+    "material": "复盘要先写事实，再写原因。",
+    "mode": "modeB",
+    "type": "single",
+    "difficulty": "easy",
+    "count": 2,
+    "userTags": ["复盘"]
+  },
+  "candidate": {
+    "keypoints": [
+      {
+        "id": "kp_0",
+        "title": "先事实后原因",
+        "importance_score": 7,
+        "evidence_quote": "复盘要先写事实，再写原因"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q_0",
+        "type": "single",
+        "stem": "根据材料，复盘时应先写哪一部分？",
+        "tag": "复盘",
+        "options": [
+          "事实",
+          "原因",
+          "预算",
+          "排期"
+        ],
+        "answer": "事实",
+        "explanation": "材料先提事实，再提原因。",
+        "evidence_quote": "复盘要先写事实，再写原因",
+        "keypoint_id": "kp_0",
+        "difficulty": "easy"
+      }
+    ]
+  },
+  "expected": {
+    "minUsableCount": 1,
+    "finalCount": 2,
+    "requireUniqueStems": true,
+    "requireEvidence": true
+  }
+}

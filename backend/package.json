@@ -1,0 +1,22 @@
+﻿{
+  "name": "aihouduan-backend-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "smoke": "node scripts/smoke-test.js",
+    "auth:smoke": "node scripts/auth-smoke-test.js",
+    "qwen:test": "node scripts/qwen-live-test.js",
+    "deepseek:test": "node scripts/deepseek-live-test.js",
+    "mongo:smoke": "node scripts/mongo-smoke-test.js",
+    "llm:rules:test": "node scripts/llm-rule-live-test.js"
+  },
+  "dependencies": {
+    "mongodb": "^7.1.0",
+    "openai": "^6.29.0"
+  }
+}
+
+
+

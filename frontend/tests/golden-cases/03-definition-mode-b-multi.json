@@ -1,0 +1,70 @@
+{
+  "id": "definition-mode-b-multi",
+  "description": "Definition-heavy mode B case with multi-select answers and limited concept extension",
+  "request": {
+    "material": "材料指出，LTV 表示一个用户在生命周期内带来的总价值，CAC 表示获取一个用户所花费的平均成本。判断投放是否可持续时，通常需要同时关注 LTV 与 CAC 的关系，而不是只看单个点击成本。",
+    "mode": "modeB",
+    "type": "multi",
+    "difficulty": "medium",
+    "count": 2,
+    "userTags": ["增长模型", "投放评估"]
+  },
+  "candidate": {
+    "keypoints": [
+      {
+        "id": "kp_0",
+        "title": "LTV 含义",
+        "importance_score": 8,
+        "evidence_quote": "LTV 表示一个用户在生命周期内带来的总价值"
+      },
+      {
+        "id": "kp_1",
+        "title": "CAC 含义",
+        "importance_score": 8,
+        "evidence_quote": "CAC 表示获取一个用户所花费的平均成本"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q_0",
+        "type": "多选",
+        "stem": "根据材料，判断投放是否可持续时，下列哪些表述成立？",
+        "tag": "投放评估",
+        "options": [
+          { "key": "A", "text": "需要同时关注 LTV 与 CAC 的关系" },
+          { "key": "B", "text": "只看单个点击成本就足够" },
+          { "key": "C", "text": "不能脱离用户生命周期价值单独下结论" },
+          { "key": "D", "text": "材料要求完全忽略获客成本" }
+        ],
+        "answer": "A，C",
+        "explanation": "材料强调看 LTV 与 CAC 的关系。",
+        "evidence_quote": "通常需要同时关注 LTV 与 CAC 的关系",
+        "keypoint_id": "kp_0",
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_1",
+        "type": "multi",
+        "stem": "下列哪些选项与材料对 LTV / CAC 的定义一致？",
+        "tag": "增长模型",
+        "options": [
+          { "key": "A", "text": "LTV 关注用户生命周期带来的总价值" },
+          { "key": "B", "text": "CAC 关注获取用户的平均成本" },
+          { "key": "C", "text": "LTV 指单次点击的平均出价" },
+          { "key": "D", "text": "CAC 指生命周期总营收" }
+        ],
+        "answer": "A,B",
+        "explanation": "材料给出了两个概念的定义。",
+        "evidence_quote": "LTV 表示一个用户在生命周期内带来的总价值；CAC 表示获取一个用户所花费的平均成本",
+        "keypoint_id": "kp_1",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "expected": {
+    "minUsableCount": 2,
+    "finalCount": 2,
+    "requireUniqueStems": true,
+    "requireEvidence": true
+  }
+}

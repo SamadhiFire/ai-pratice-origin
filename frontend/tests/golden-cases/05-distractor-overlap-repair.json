@@ -1,0 +1,93 @@
+{
+  "id": "distractor-overlap-repair",
+  "description": "Candidate set with duplicate stems and placeholder options that should be repaired by finalization fallback",
+  "request": {
+    "material": "A/B 测试中，要先确认唯一核心指标，再保持对照组与实验组只有一个关键变量不同。材料还指出，分析结果时要先看样本量是否足够，再解释指标波动。",
+    "mode": "modeA",
+    "type": "single",
+    "difficulty": "medium",
+    "count": 3,
+    "userTags": ["实验设计", "结果分析"]
+  },
+  "candidate": {
+    "keypoints": [
+      {
+        "id": "kp_0",
+        "title": "唯一核心指标",
+        "importance_score": 8,
+        "evidence_quote": "要先确认唯一核心指标"
+      },
+      {
+        "id": "kp_1",
+        "title": "控制单一变量",
+        "importance_score": 8,
+        "evidence_quote": "对照组与实验组只有一个关键变量不同"
+      },
+      {
+        "id": "kp_2",
+        "title": "先看样本量",
+        "importance_score": 7,
+        "evidence_quote": "分析结果时要先看样本量是否足够"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q_0",
+        "type": "single",
+        "stem": "A/B 测试开始前应先确认什么？",
+        "tag": "实验设计",
+        "options": [
+          { "key": "A", "text": "唯一核心指标" },
+          { "key": "B", "text": "所有变量一起改动" },
+          { "key": "C", "text": "先做总结报告" },
+          { "key": "D", "text": "取消对照组" }
+        ],
+        "answer": "A",
+        "explanation": "材料先强调唯一核心指标。",
+        "evidence_quote": "要先确认唯一核心指标",
+        "keypoint_id": "kp_0",
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_1",
+        "type": "single",
+        "stem": "A/B 测试开始前应先确认什么？",
+        "tag": "结果分析",
+        "options": [
+          { "key": "A", "text": "唯一核心指标" },
+          { "key": "B", "text": "干扰项1" },
+          { "key": "C", "text": "干扰项2" },
+          { "key": "D", "text": "干扰项3" }
+        ],
+        "answer": "A",
+        "explanation": "重复题干并包含占位选项，用于验证过滤。",
+        "evidence_quote": "要先确认唯一核心指标",
+        "keypoint_id": "kp_0",
+        "difficulty": "medium"
+      },
+      {
+        "id": "q_2",
+        "type": "single",
+        "stem": "分析 A/B 测试结果时，材料建议先检查什么？",
+        "tag": "结果分析",
+        "options": [
+          { "key": "A", "text": "样本量是否足够" },
+          { "key": "B", "text": "办公室座位数量" },
+          { "key": "C", "text": "周报排版风格" },
+          { "key": "D", "text": "品牌色是否统一" }
+        ],
+        "answer": "A",
+        "explanation": "材料要求先看样本量。",
+        "evidence_quote": "分析结果时要先看样本量是否足够",
+        "keypoint_id": "kp_2",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "expected": {
+    "minUsableCount": 2,
+    "finalCount": 3,
+    "requireUniqueStems": true,
+    "requireEvidence": true
+  }
+}

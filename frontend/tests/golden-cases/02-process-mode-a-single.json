@@ -1,0 +1,93 @@
+{
+  "id": "process-mode-a-single",
+  "description": "Process-heavy material where one duplicate stem forces finalizer repair via fallback",
+  "request": {
+    "material": "复盘流程分三步：先还原事实，再定位原因，最后沉淀动作。材料强调，还原事实时不能夹带结论；定位原因时要优先核对证据链；沉淀动作时要写出下一次可执行的调整。",
+    "mode": "modeA",
+    "type": "single",
+    "difficulty": "easy",
+    "count": 3,
+    "userTags": ["复盘流程", "执行动作"]
+  },
+  "candidate": {
+    "keypoints": [
+      {
+        "id": "kp_0",
+        "title": "先还原事实",
+        "importance_score": 8,
+        "evidence_quote": "先还原事实"
+      },
+      {
+        "id": "kp_1",
+        "title": "再定位原因",
+        "importance_score": 7,
+        "evidence_quote": "定位原因时要优先核对证据链"
+      },
+      {
+        "id": "kp_2",
+        "title": "最后沉淀动作",
+        "importance_score": 7,
+        "evidence_quote": "沉淀动作时要写出下一次可执行的调整"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q_0",
+        "type": "single",
+        "stem": "复盘流程的第一步是什么？",
+        "tag": "复盘流程",
+        "options": [
+          { "key": "A", "text": "先还原事实" },
+          { "key": "B", "text": "先沉淀动作" },
+          { "key": "C", "text": "先写结论" },
+          { "key": "D", "text": "先分配预算" }
+        ],
+        "answer": "A",
+        "explanation": "材料明确给出第一步。",
+        "evidence_quote": "先还原事实",
+        "keypoint_id": "kp_0",
+        "difficulty": "easy"
+      },
+      {
+        "id": "q_1",
+        "type": "single",
+        "stem": "定位原因时应该优先做什么？",
+        "tag": "复盘流程",
+        "options": [
+          { "key": "A", "text": "优先核对证据链" },
+          { "key": "B", "text": "优先修改排版" },
+          { "key": "C", "text": "优先增加会议时长" },
+          { "key": "D", "text": "优先扩招团队" }
+        ],
+        "answer": "A",
+        "explanation": "材料强调要先核对证据链。",
+        "evidence_quote": "定位原因时要优先核对证据链",
+        "keypoint_id": "kp_1",
+        "difficulty": "easy"
+      },
+      {
+        "id": "q_2",
+        "type": "single",
+        "stem": "定位原因时应该优先做什么？",
+        "tag": "执行动作",
+        "options": [
+          { "key": "A", "text": "优先核对证据链" },
+          { "key": "B", "text": "优先更换会议室" },
+          { "key": "C", "text": "优先增加投放量" },
+          { "key": "D", "text": "优先扩大样本库" }
+        ],
+        "answer": "A",
+        "explanation": "这是重复题干，用于验证去重。",
+        "evidence_quote": "定位原因时要优先核对证据链",
+        "keypoint_id": "kp_1",
+        "difficulty": "easy"
+      }
+    ]
+  },
+  "expected": {
+    "minUsableCount": 2,
+    "finalCount": 3,
+    "requireUniqueStems": true,
+    "requireEvidence": true
+  }
+}

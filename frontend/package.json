@@ -1,0 +1,28 @@
+{
+  "name": "study-quiz-tool-uniapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:h5": "uni",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build:h5": "uni build",
+    "build:mp-weixin": "node -e \"const fs=require('fs');fs.rmSync('dist/build/mp-weixin',{recursive:true,force:true})\" && uni build -p mp-weixin && node scripts/prune-orphan-assets.js",
+    "type-check": "vue-tsc --noEmit",
+    "validate:generation": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types scripts/validate-generation-fixtures.mts",
+    "validate:generation:payload": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types scripts/validate-generated-payload.mts"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-4080720251210001",
+    "@dcloudio/uni-components": "3.0.0-4080720251210001",
+    "@dcloudio/uni-h5": "3.0.0-4080720251210001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-4080720251210001",
+    "vue": "3.4.21"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "3.4.19",
+    "@dcloudio/vite-plugin-uni": "3.0.0-4080720251210001",
+    "typescript": "^5.2.2",
+    "vite": "5.2.8",
+    "vue-tsc": "^2.0.29"
+  }
+}
