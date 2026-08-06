@@ -1,4 +1,4 @@
-﻿import type { PracticeMode, StoredQuestion } from './question-bank'
+import type { PracticeMode, StoredQuestion } from './question-bank'
 import { normalizeOptionText } from './question-bank'
 import {
   clearPracticeSessionInBackend,

@@ -1,4 +1,4 @@
-﻿export interface Chunk {
+export interface Chunk {
   index: number
   text: string
 }

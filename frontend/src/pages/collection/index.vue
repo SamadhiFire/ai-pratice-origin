@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <view class="page-root">
     <view class="sticky-header collection-fixed-shell" :style="fixedHeaderStyle">
       <view class="tabs-header">

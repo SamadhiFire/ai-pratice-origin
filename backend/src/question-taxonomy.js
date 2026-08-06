@@ -1,4 +1,4 @@
-﻿const QUESTION_CATEGORY_DEFINITIONS = [
+const QUESTION_CATEGORY_DEFINITIONS = [
   {
     id: "basic_definition",
     label: "Basic Definition",

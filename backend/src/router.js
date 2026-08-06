@@ -1,4 +1,4 @@
-﻿function tokenize(pathname) {
+function tokenize(pathname) {
   return String(pathname || "/")
     .split("/")
     .filter(Boolean);

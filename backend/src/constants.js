@@ -1,4 +1,4 @@
-﻿const API_PREFIX = "/api/v1";
+const API_PREFIX = "/api/v1";
 const DEFAULT_PORT = 3000;
 const TOKEN_TTL_SECONDS = 7200;
 const REFRESH_TOKEN_TTL_SECONDS = 30 * 24 * 60 * 60;

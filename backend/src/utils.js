@@ -1,4 +1,4 @@
-﻿const { createHash, randomUUID, scryptSync, timingSafeEqual } = require("crypto");
+const { createHash, randomUUID, scryptSync, timingSafeEqual } = require("crypto");
 const {
   DEFAULT_LLM_CONFIG,
   ERROR_CODES,

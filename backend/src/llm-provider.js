@@ -1,4 +1,4 @@
-﻿const OpenAI = require("openai");
+const OpenAI = require("openai");
 const { ERROR_CODES, PROVIDER_DEFAULTS } = require("./constants");
 
 const REQUEST_TIMEOUT_MS = 90_000;

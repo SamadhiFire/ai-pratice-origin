@@ -1,4 +1,4 @@
-﻿const { ERROR_CODES } = require("./constants");
+const { ERROR_CODES } = require("./constants");
 const { safeJsonParse } = require("./utils");
 
 const DEFAULT_CORS_MAX_AGE_SECONDS = 86400;

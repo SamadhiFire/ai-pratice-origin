@@ -1,4 +1,4 @@
-﻿const MODE_RULES = {
+const MODE_RULES = {
   modeA: {
     label: "Keypoint Extraction",
     prompt:

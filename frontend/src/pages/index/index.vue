@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <view class="page-root">
     <view class="page-header-fixed" :style="pageHeaderStyle">
       <view class="title-wrap">

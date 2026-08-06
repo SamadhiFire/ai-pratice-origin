@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <view class="oa-tab-wrap">
     <view class="oa-tab-shell">
       <view

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <view class="oa-page session-page">
     <view class="session-fixed-shell">
       <view class="oa-header session-header" :style="sessionHeaderStyle">

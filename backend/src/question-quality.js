@@ -1,4 +1,4 @@
-﻿const { splitMaterial } = require("./utils");
+const { splitMaterial } = require("./utils");
 const { computeTextSimilarity } = require("./question-generation-rules");
 
 const ZH_GENERIC_PATTERNS = [

@@ -1,4 +1,4 @@
-﻿const { once } = require("events");
+const { once } = require("events");
 const { createApp } = require("../src/app");
 const { MongoStore } = require("../src/store");
 const { DEFAULT_MONGODB_URL } = require("../src/constants");

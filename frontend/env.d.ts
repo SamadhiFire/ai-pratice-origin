@@ -1,4 +1,4 @@
-﻿/// <reference types="@dcloudio/types" />
+/// <reference types="@dcloudio/types" />
 
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'

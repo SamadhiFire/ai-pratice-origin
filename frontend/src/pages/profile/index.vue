@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <view class="page-root">
     <view class="profile-fixed-shell" :style="fixedHeaderStyle">
       <view class="title-header">

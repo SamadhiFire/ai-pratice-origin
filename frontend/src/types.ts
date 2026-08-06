@@ -1,4 +1,4 @@
-﻿export interface Keypoint {
+export interface Keypoint {
   id: string
   title: string
   importance_score: number

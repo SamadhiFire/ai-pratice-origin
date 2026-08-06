@@ -1,4 +1,4 @@
-﻿﻿const {
+﻿const {
   ensureStoredQuestion,
   hashText,
   normalizeTags,

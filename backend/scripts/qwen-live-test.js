@@ -1,4 +1,4 @@
-﻿const { spawn } = require("child_process");
+const { spawn } = require("child_process");
 
 const child = spawn(process.execPath, ["scripts/provider-live-test.js", "qwen"], {
   cwd: __dirname + "/..",
