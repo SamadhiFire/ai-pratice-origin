@@ -586,7 +586,7 @@ class SupabaseStore extends BaseStore {
       updated_at: new Date().toISOString(),
     });
     const response = await fetch(url, {
-      method: "PATCH",
+      method: "POST",
       headers: {
         apikey: this.supabaseKey,
         Authorization: `Bearer ${this.supabaseKey}`,

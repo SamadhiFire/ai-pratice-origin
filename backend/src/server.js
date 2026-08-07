@@ -1,4 +1,5 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
 const { DEFAULT_PORT } = require("./constants");
 const { createApp } = require("./app");
 const { createDefaultStore } = require("./store");

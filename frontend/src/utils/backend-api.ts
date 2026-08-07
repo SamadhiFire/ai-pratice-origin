@@ -1,6 +1,6 @@
 const API_BASE_URL_STORAGE_KEY = 'study_api_base_url_v1'
 // 指向你的本地后端服务 (如果你的后端路由没有 /api/v1 前缀，请改为 'http://localhost:3000')
-const DEFAULT_API_BASE_URL = 'https://upwxyxlondgv.sealosbja.site/api/v1'
+const DEFAULT_API_BASE_URL = 'http://localhost:3000/api/v1'
 
 export interface ApiEnvelope<TData = unknown> {
   code?: number
