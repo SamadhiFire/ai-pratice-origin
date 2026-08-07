@@ -81,7 +81,7 @@ const DEFAULT_LLM_CONFIG = {
   },
 };
 
-const DEFAULT_STORAGE_DRIVER = process.env.STORAGE_DRIVER || "mongodb";
+const DEFAULT_STORAGE_DRIVER = process.env.STORAGE_DRIVER || "supabase";
 const DEFAULT_MONGODB_URL =
   process.env.MONGODB_URL ||
   "mongodb://127.0.0.1:27017";

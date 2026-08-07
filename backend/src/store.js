@@ -10,6 +10,11 @@ const {
   REFRESH_TOKEN_TTL_SECONDS,
   TOKEN_TTL_SECONDS,
 } = require("./constants");
+
+const DEFAULT_SUPABASE_URL = process.env.SUPABASE_URL || "";
+const DEFAULT_SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || "";
+const DEFAULT_SUPABASE_STATE_KEY =
+  process.env.SUPABASE_STATE_KEY || "default";
 const {
   clone,
   createDefaultLlmConfig,
@@ -519,6 +524,87 @@ class MemoryStore extends BaseStore {
   }
 }
 
+class SupabaseStore extends BaseStore {
+  constructor(options = {}) {
+    super();
+    this.driver = "supabase";
+    this.supabaseUrl = options.supabaseUrl || DEFAULT_SUPABASE_URL;
+    this.supabaseKey = options.supabaseKey || DEFAULT_SUPABASE_ANON_KEY;
+    this.stateKey = options.stateKey || DEFAULT_SUPABASE_STATE_KEY;
+    if (!this.supabaseUrl || !this.supabaseKey) {
+      throw new Error(
+        "SupabaseStore requires SUPABASE_URL and SUPABASE_ANON_KEY"
+      );
+    }
+  }
+
+  static async create(options = {}) {
+    const store = new SupabaseStore(options);
+    await store.initialize();
+    return store;
+  }
+
+  async initialize() {
+    const existing = await this.fetchState();
+    if (existing) {
+      this.loadFromObject(existing);
+      return;
+    }
+    await this.persist();
+  }
+
+  async fetchState() {
+    const url = `${this.supabaseUrl}/rest/v1/app_state?id=eq.${encodeURIComponent(
+      this.stateKey
+    )}&select=data`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        apikey: this.supabaseKey,
+        Authorization: `Bearer ${this.supabaseKey}`,
+      },
+    });
+    if (!response.ok) {
+      throw new Error(
+        `supabase fetch failed: ${response.status} ${await response.text()}`
+      );
+    }
+    const rows = await response.json();
+    if (!Array.isArray(rows) || rows.length === 0) {
+      return null;
+    }
+    return rows[0].data;
+  }
+
+  async persist() {
+    const url = `${this.supabaseUrl}/rest/v1/app_state?id=eq.${encodeURIComponent(
+      this.stateKey
+    )}`;
+    const body = JSON.stringify({
+      id: this.stateKey,
+      data: this.exportState(),
+      updated_at: new Date().toISOString(),
+    });
+    const response = await fetch(url, {
+      method: "PATCH",
+      headers: {
+        apikey: this.supabaseKey,
+        Authorization: `Bearer ${this.supabaseKey}`,
+        "Content-Type": "application/json",
+        Prefer: "resolution=merge-duplicates",
+      },
+      body,
+    });
+    if (!response.ok) {
+      throw new Error(
+        `supabase persist failed: ${response.status} ${await response.text()}`
+      );
+    }
+  }
+
+  async close() {}
+}
+
 class MongoStore extends BaseStore {
   constructor(options = {}) {
     super();
@@ -588,6 +674,15 @@ async function createDefaultStore(options = {}) {
     return new MemoryStore({ filePath: options.filePath });
   }
 
+  if (driver === "supabase") {
+    const supabaseOptions = {
+      supabaseUrl: options.supabaseUrl || DEFAULT_SUPABASE_URL,
+      supabaseKey: options.supabaseKey || DEFAULT_SUPABASE_ANON_KEY,
+      stateKey: options.stateKey || DEFAULT_SUPABASE_STATE_KEY,
+    };
+    return SupabaseStore.create(supabaseOptions);
+  }
+
   const strictMongoStartup =
     typeof options.strictMongoStartup === "boolean"
       ? options.strictMongoStartup
@@ -620,6 +715,7 @@ async function createDefaultStore(options = {}) {
 module.exports = {
   MemoryStore,
   MongoStore,
+  SupabaseStore,
   createDefaultStore,
 };
 

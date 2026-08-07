@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { DEFAULT_PORT } = require("./constants");
 const { createApp } = require("./app");
 const { createDefaultStore } = require("./store");
